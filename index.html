@@ -18,7 +18,7 @@
     />
   </head>
   <body>
-    <section class="background">
+    <section class="layer">
       <main class="main">
         <!-- header  -->
         <header>
@@ -29,7 +29,6 @@
                 <span>GreenBank</span>
               </a>
               <img
-                onclick="showSideBar()"
                 class="menu-bar"
                 src="./Assets/menu.svg"
                 alt="menu"
@@ -37,34 +36,34 @@
             </div>
             <nav class="desktop-nav">
               <ul class="nav-link">
-                <li><a href="">Why Us</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Our Proccess</a></li>
-                <li><a href="">Payments</a></li>
-                <li><a href="">FAQs</a></li>
+                <li><a href="#about">Why Us</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#proccess">Our Proccess</a></li>
+                <li><a href="#payment">Payments</a></li>
+                <li><a href="#faqs">FAQs</a></li>
               </ul>
             </nav>
             <div class="contact-btn-container">
               <button class="contact-btn">Contact</button>
             </div>
           </div>
-          <div class="side-bar-main active">
+          <aside class="side-bar-main">
             <div class="sub-side-bar">
               <img class="close-icon" src="/Assets/close.svg" alt="" />
               <nav class="mobile-nav">
                 <ul class="side-bar-nav-link">
-                  <li><a href="">Why Us</a></li>
-                  <li><a href="">Services</a></li>
-                  <li><a href="">Our Proccess</a></li>
-                  <li><a href="">Payments</a></li>
-                  <li><a href="">FAQs</a></li>
+                  <li><a href="#about">Why Us</a></li>
+                  <li><a href="#Services">Services</a></li>
+                  <li><a href="#proccess">Our Proccess</a></li>
+                  <li><a href="#payment">Payments</a></li>
+                  <li><a href="#faqs">FAQs</a></li>
                 </ul>
               </nav>
               <div class="contact-btn-container-mobile">
                 <button class="contact-btn">Contact</button>
               </div>
             </div>
-          </div>
+          </aside>
         </header>
         <!-- header  -->
 
@@ -97,7 +96,7 @@
         <!-- hero section -->
 
         <!-- about section -->
-        <section class="about-sec-main">
+        <section class="about-sec-main" id="about">
           <div class="about-layout">
             <div class="about-content">
               <h4>16y</h4>
@@ -145,7 +144,7 @@
         <!-- sponsors section -->
 
         <!-- features section -->
-        <section class="features-main-section">
+        <section class="features-main-section" id="Services">
           <div class="sub-features-container">
             <div class="title">
               <h4>What do we offer?</h4>
@@ -184,7 +183,7 @@
         <!-- features section -->
 
         <!-- personalize-card section -->
-        <section class="personalize-card-container">
+        <section class="personalize-card-container" id="proccess">
           <div class="personalize-card-layout">
             <div class="personalize-card-right">
               <img src="./Assets/personalize-card.png" alt="credit card" />
@@ -209,7 +208,7 @@
         <!-- personalize-card section -->
 
         <!-- find-perfect-card section -->
-        <section class="find-perfect-card-container">
+        <section class="find-perfect-card-container" id="payment">
           <div class="find-perfect-card-layout">
             <div class="find-perfect-card-left">
               <img src="./Assets/find-perfect-card.png" alt="credit card" />
@@ -304,15 +303,19 @@
         <!-- testimonal section -->
 
         <!-- FAQs section -->
-        <section class="faqs-main-sec">
+        <section class="faqs-main-sec" id="faqs">
           <h4 class="faqs-title">FAQs</h4>
           <div class="faqs-container">
-            <div class="faqs">
+            <article class="faqs">
               <div class="question-container">
                 <p class="question">
                   What credit score do I need to apply for a credit card?
                 </p>
-                <img id="showAnswer" src="./Assets/+.png" alt="" />
+                <button class="question-btn">
+                  <img class="plus-icon" src="./Assets/+.png" alt="" />
+
+                  <img class="minus-icon" src="./Assets/-.png" alt="" />
+                </button>
               </div>
               <p class="answer" id="answer">
                 The required credit score may vary depending on the specific
@@ -321,13 +324,17 @@
                 premium credit cards.
               </p>
               <hr />
-            </div>
-            <div class="faqs">
+            </article>
+            <article class="faqs">
               <div class="question-container">
                 <p class="question">
                   How can I apply for a credit card online?
                 </p>
-                <img id="showAnswer" src="./Assets/+.png" alt="" />
+                <button class="question-btn">
+                  <img class="plus-icon" src="./Assets/+.png" alt="" />
+
+                  <img class="minus-icon" src="./Assets/-.png" alt="" />
+                </button>
               </div>
               <p class="answer" id="answer">
                 Applying for a credit card online is simple. Just visit our
@@ -336,13 +343,17 @@
                 and submit your application securely.
               </p>
               <hr />
-            </div>
-            <div class="faqs">
+            </article>
+            <article class="faqs">
               <div class="question-container">
                 <p class="question">
                   Are there any annual fees associated with the credit card?
                 </p>
-                <img id="showAnswer" src="./Assets/+.png" alt="" />
+                <button class="question-btn">
+                  <img class="plus-icon" src="./Assets/+.png" alt="" />
+
+                  <img class="minus-icon" src="./Assets/-.png" alt="" />
+                </button>
               </div>
               <p class="answer" id="answer">
                 Annual fees may apply to some credit cards, but not all. Our
@@ -350,14 +361,18 @@
                 fees associated with the card you're interested in.
               </p>
               <hr />
-            </div>
-            <div class="faqs">
+            </article>
+            <article class="faqs">
               <div class="question-container">
                 <p class="question">
                   How long does it take to receive the credit card once
                   approved?
                 </p>
-                <img id="showAnswer" src="./Assets/+.png" alt="" />
+                <button class="question-btn">
+                  <img class="plus-icon" src="./Assets/+.png" alt="" />
+
+                  <img class="minus-icon" src="./Assets/-.png" alt="" />
+                </button>
               </div>
               <p class="answer" id="answer">
                 Once your credit card application is approved, it typically
@@ -366,13 +381,17 @@
                 approval for online purchases.
               </p>
               <hr />
-            </div>
-            <div class="faqs">
+            </article>
+            <article class="faqs">
               <div class="question-container">
                 <p class="question">
                   How can I check my credit card balance and transactions?
                 </p>
-                <img id="showAnswer" src="./Assets/+.png" alt="" />
+                <button class="question-btn">
+                  <img class="plus-icon" src="./Assets/+.png" alt="" />
+
+                  <img class="minus-icon" src="./Assets/-.png" alt="" />
+                </button>
               </div>
               <p class="answer" id="answer">
                 You can easily check your credit card balance and transactions
@@ -380,13 +399,17 @@
                 log in to your account to access your credit card information.
               </p>
               <hr />
-            </div>
-            <div class="faqs">
+            </article>
+            <article class="faqs">
               <div class="question-container">
                 <p class="question">
                   What should I do if my credit card is lost or stolen?
                 </p>
-                <img id="showAnswer" src="./Assets/+.png" alt="" />
+                <button class="question-btn">
+                  <img class="plus-icon" src="./Assets/+.png" alt="" />
+
+                  <img class="minus-icon" src="./Assets/-.png" alt="" />
+                </button>
               </div>
               <p class="answer" id="answer">
                 If your credit card is lost or stolen, please notify us
@@ -395,11 +418,14 @@
                 replacement card.
               </p>
               <hr />
-            </div>
-            <div class="faqs">
+            </article>
+            <article class="faqs">
               <div class="question-container">
                 <p class="question">Is my credit card information secure?</p>
-                <img id="showAnswer" src="./Assets/+.png" alt="" />
+                <button class="question-btn">
+                  <img class="plus-icon" src="./Assets/+.png" alt="" />
+                  <img class="minus-icon" src="./Assets/-.png" alt="" />
+                </button>
               </div>
               <p class="answer" id="answer">
                 Yes, we prioritize the security of your information. Our credit
@@ -408,7 +434,7 @@
                 experience.
               </p>
               <hr />
-            </div>
+            </article>
           </div>
         </section>
         <!-- FAQs section -->
@@ -481,13 +507,17 @@
             </div>
           </section>
           <div class="copywrite-cookies">
-            <p class="copywrite">copyright 2023 DoraDesign All Rights Reserved</p>
-            <p class="cookies">This page uses cookies. See cookies details <a href="">here</a></p>
+            <p class="copywrite">
+              copyright 2023 DoraDesign All Rights Reserved
+            </p>
+            <p class="cookies">
+              This page uses cookies. See cookies details <a href="">here</a>
+            </p>
           </div>
         </section>
       </footer>
       <!-- footer section -->
     </section>
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

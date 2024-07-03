@@ -4,10 +4,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "M PLUS 1";
-  /* background-color: #2BB32A; */
-  background-color: rebeccapurple;
+  background-color: #11221d;
+  overflow-x: hidden;
+}
+.layer {
+  background: url("./Assets/layer.png") no-repeat center center/cover;
 }
 .main {
   max-width: 1300px;
@@ -41,22 +47,25 @@ header .desktop-nav {
   color: black;
 }
 .close-icon {
+  color: black;
   width: 30px;
 }
 .side-bar-main {
   position: fixed;
   top: 0;
-  right: -800px;
+  right: -500px;
   height: 100vh;
-  width: 250px;
+  width: 100%;
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.473);
   backdrop-filter: blur(10px);
   transition: all 500ms ease-in-out;
+  /* transform: translate(-500%); */
 }
-/* .active{
-  right: 500px;
-} */
+.show-sidebar{
+  right: 0;
+  /* transform: translate(0); */
+}
 .sub-side-bar {
   display: flex;
   flex-direction: column;
@@ -98,18 +107,25 @@ header .desktop-nav {
     list-style: none;
   }
   .nav-link a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
   }
   .contact-btn-container {
     display: block;
   }
   .contact-btn {
-    border: none;
+    border: 2px solid #2bb32a;
+    color: #2BB32A;
+    /* border: none; */
+    padding: 12px 32px 12px 32px;
+    background-color: transparent;
     padding: 10px 15px;
     border-radius: 64px;
     cursor: pointer;
   }
+  .side-bar-main {
+  display: none;
+}
 }
 
 /* hero style */
@@ -642,7 +658,9 @@ header .desktop-nav {
   gap: 32px;
   border-radius: 32px;
   /* background-color: white; */
-  background-color: #27322f3d;
+  /* background-color: #27322f3d; */
+  background-color: rgba(255, 255, 255, 0.114);
+  backdrop-filter: blur(10px);
   padding: 48px 24px 48px 24px;
   /* backdrop-filter: blur(10px); */
 }
@@ -701,7 +719,7 @@ header .desktop-nav {
 }
 
 /* FAQs style */
-.faqs-main-sec{
+.faqs-main-sec {
   margin-top: 3rem;
 }
 .faqs-title {
@@ -733,20 +751,38 @@ header .desktop-nav {
   line-height: 32px;
   color: #ffffff;
 }
+.question-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
 .answer {
-  display: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #adb2b1;
 }
-.show-answer {
-  display: flex;
-}
 hr {
   padding: 1px;
   background-color: #ffffff;
 }
+/* hide answer */
+.answer {
+  display: none;
+}
+.show-answer .answer {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-answer .minus-icon {
+  display: inline;
+}
+.show-answer .plus-icon {
+  display: none;
+}
+
 @media screen and (min-width: 1200px) {
   .faqs-main-sec {
     min-height: 100vh;
