@@ -4,7 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -53,18 +53,17 @@ header .desktop-nav {
 .side-bar-main {
   position: fixed;
   top: 0;
-  right: -500px;
+  right: -900px;
   height: 100vh;
-  width: 100%;
+  width: 250px;
   z-index: 999;
+  padding-top: 50px;
   background-color: rgba(255, 255, 255, 0.473);
   backdrop-filter: blur(10px);
   transition: all 500ms ease-in-out;
-  /* transform: translate(-500%); */
 }
-.show-sidebar{
+.show-sidebar {
   right: 0;
-  /* transform: translate(0); */
 }
 .sub-side-bar {
   display: flex;
@@ -86,6 +85,15 @@ header .desktop-nav {
   width: 100%;
   list-style: none;
 }
+ .contact-btn-mobile {
+    border: none;
+    color: #FFFFFF;
+    /* border: none; */
+    padding: 12px 32px 12px 32px;
+    background-color: #2bb32a;
+    border-radius: 64px;
+    cursor: pointer;
+  }
 @media screen and (min-width: 768px) {
   .header-layout {
     display: flex;
@@ -115,7 +123,7 @@ header .desktop-nav {
   }
   .contact-btn {
     border: 2px solid #2bb32a;
-    color: #2BB32A;
+    color: #2bb32a;
     /* border: none; */
     padding: 12px 32px 12px 32px;
     background-color: transparent;
@@ -124,8 +132,8 @@ header .desktop-nav {
     cursor: pointer;
   }
   .side-bar-main {
-  display: none;
-}
+    display: none;
+  }
 }
 
 /* hero style */
@@ -138,14 +146,30 @@ header .desktop-nav {
   flex-direction: column;
   gap: 1rem;
 }
-.hero-right img {
+.hero-righ-card {
   max-width: 100%;
   height: auto;
 }
+.hero-right {
+  position: relative;
+  /* display: none; */
+}
+.hero-right-green {
+  position: absolute;
+  max-width: 492px;
+  width: 100%;
+  display: none;
+}
 .hero-left {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+.hero-left-img {
+  position: absolute;
+  width: 200px;
+  top: 30px;
 }
 .hero-left h4 {
   width: 320px;
@@ -163,10 +187,22 @@ header .desktop-nav {
   color: #adb2b1;
 }
 .hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   border: none;
   border-radius: 64px;
   background-color: #2bb32a;
   padding: 13px 35px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 1s  ease-in-out;
+}
+.hero-btn:hover {
+  transform: scale(-1.05);
+}
+.hero-btn img{
+  width: 22.5px;
 }
 .frame1 {
   display: flex;
@@ -192,6 +228,16 @@ header .desktop-nav {
 @media screen and (min-width: 1200px) {
   .hero-sec-main {
     min-height: 100vh;
+  }
+  .hero-left-img {
+    width: 359px;
+    top: 55px;
+  }
+  .hero-right-green {
+    display: block;
+    top: 46px;
+    left: 285px;
+    z-index: -1;
   }
   .hero-left h4 {
     width: 604px;
@@ -277,7 +323,7 @@ header .desktop-nav {
   }
   .about-content h4 {
     font-weight: 700;
-    font-size: 35px;
+    font-size: 48px;
     line-height: 56px;
     letter-spacing: -0.32px;
     color: #ffffff;
@@ -514,6 +560,9 @@ header .desktop-nav {
   color: #adb2b1;
 }
 .personalize-card-left-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   cursor: pointer;
   border: none;
   border-radius: 64px;

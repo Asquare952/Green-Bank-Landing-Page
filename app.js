@@ -2,16 +2,20 @@
 const sideBarToggleBtn = document.querySelector(".menu-bar");
 const closeSideBar = document.querySelector(".close-icon");
 const sideBar = document.querySelector(".side-bar-main");
-
-sideBarToggleBtn.addEventListener("click", function() {
+const aside = document.querySelector(".side-bar-main");
+sideBarToggleBtn.addEventListener("click", function () {
   sideBar.classList.toggle("show-sidebar");
-})
+});
 
-closeSideBar.addEventListener("click", function() {
+closeSideBar.addEventListener("click", function () {
   sideBar.classList.remove("show-sidebar");
-})
+});
 
-// FAQs funtionalities
+aside.addEventListener("click", function () {
+  sideBar.classList.remove("show-sidebar");
+});
+
+// FAQs logic
 const questions = document.querySelectorAll(".faqs");
 
 questions.forEach(function (question) {
