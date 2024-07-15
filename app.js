@@ -1,6 +1,6 @@
 // mobile navigation menu logics
-const sideBarToggleBtn = document.querySelector(".menu-bar");
-const closeSideBar = document.querySelector(".close-icon");
+const sideBarToggleBtn = document.querySelector(".fa-bars");
+const closeSideBar = document.querySelector(".fa-xmark");
 const sideBar = document.querySelector(".side-bar-main");
 const aside = document.querySelector(".side-bar-main");
 sideBarToggleBtn.addEventListener("click", function () {
