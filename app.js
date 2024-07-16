@@ -19,7 +19,7 @@ aside.addEventListener("click", function () {
 const questions = document.querySelectorAll(".faqs");
 
 questions.forEach(function (question) {
-  const btn = question.querySelector(".question-btn");
+  const btn = question.querySelector(".question-container");
 
   btn.addEventListener("click", function () {
     questions.forEach(function (item) {
@@ -30,4 +30,18 @@ questions.forEach(function (question) {
 
     question.classList.toggle("show-answer");
   });
+});
+
+// fixed nav bar
+const topLink = document.querySelector(".top-link");
+window.addEventListener("scroll", function () {
+  const scrollHeight = window.scrollY;
+
+  // set up back to top
+  if (scrollHeight > 500) {
+    console.log("helo");
+    topLink.classList.add("show-link");
+  } else {
+    topLink.classList.remove("show-link");
+  }
 });
